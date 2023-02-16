@@ -19,7 +19,6 @@ const Services = () => {
         setSearch(searchRef.current.value);
     }
 
-    console.log(services);
 
     return (
         <div className='w-full flex flex-col justify-center items-center gap-6'>
