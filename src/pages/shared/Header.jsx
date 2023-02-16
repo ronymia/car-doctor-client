@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineSearch, HiOutlineShoppingBag } from 'react-icons/hi';
 
 
@@ -10,15 +10,25 @@ const Header = () => {
 
     const menuItems = <>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <Link to='/'
+            <NavLink to='/'
                 className={({ isActive }) => isActive ? "text-primary" : undefined}
-            >Home</Link>
+            >Home</NavLink>
         </li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'><Link to='/about'>About</Link></li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'><Link to='/services'>Services</Link></li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'><Link to='/blog'>Blog</Link></li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'><Link to='/orders'>Orders</Link></li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'><Link to='/login'>Login</Link></li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <NavLink to='/about'>About</NavLink>
+        </li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <NavLink to='/services'>Services</NavLink>
+        </li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <NavLink to='/blog'>Blog</NavLink>
+        </li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <NavLink to='/orders'>Orders</NavLink>
+        </li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <NavLink to='/login'>Login</NavLink>
+        </li>
     </>
 
     return (
@@ -43,9 +53,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="flex flex-row items-center gap-5 mr-5 text-2xl text-darkBlack2">
-                    <HiOutlineShoppingBag />
-                    <HiOutlineSearch />
+                <div className="flex flex-row items-center text-darkBlack2">
+                    <button className="btn btn-ghost text-2xl">
+                        <HiOutlineShoppingBag />
+                    </button>
+                    <button className="btn btn-ghost text-2xl">
+                        <HiOutlineSearch />
+                    </button>
                 </div>
                 <button className="btn btn-outline text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300">Appointment</button>
             </div>
