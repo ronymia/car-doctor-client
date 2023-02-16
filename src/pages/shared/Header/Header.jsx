@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineSearch, HiOutlineShoppingBag } from 'react-icons/hi';
+import logo from '../../../assets/logo.svg';
 
 
-import logo from '../../assets/logo.svg';
 
 const Header = () => {
     const [toggleIsOpned, setToggleIsOpned] = useState(false);
