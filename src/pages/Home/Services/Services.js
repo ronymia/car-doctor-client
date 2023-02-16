@@ -22,7 +22,7 @@ const Services = () => {
     console.log(services);
 
     return (
-        <div className='w-full flex flex-col justify-center items-center gap-12'>
+        <div className='w-full flex flex-col justify-center items-center gap-6'>
             <div className='text-center w-1/2 flex flex-col justify-center items-center gap-4'>
                 <p className="text-xl font-bold text-orange-600">Services</p>
                 <h2 className="text-[45px] font-semibold text-darkBlack">Our Service Area</h2>
@@ -41,6 +41,7 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
+            <button className="btn border-primary text-primary bg-transparent hover:text-white hover:border-black rounded transition-all duration-500 mt-4">More Services</button>
         </div>
     );
 };
