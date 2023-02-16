@@ -36,9 +36,11 @@ const Header = () => {
             <div className="navbar-start flex relative"
                 onClick={() => setToggleIsOpned(!toggleIsOpned)}
             >
+                {/* responsive nav hamburger  */}
                 <button className="btn btn-square btn-ghost md:hidden text-darkBlack2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
+                {/* responsive navbar  */}
                 <ul className={`menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52
                 absolute -left-96 ${!toggleIsOpned ? "top-14" : "left-0 top-14"} transition-all duration-300 bg-white`}>
                     {menuItems}
