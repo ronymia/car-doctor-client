@@ -1,0 +1,83 @@
+[
+    {
+        "_id": "635a0c0b64a6d23122ae",
+        "emplyee_id": "01",
+        "title": "Engine Expert",
+        "specialty": "Car Engine Plug",
+        "name": "MD Rony Mia",
+        "email": "car@doctor.dev",
+        "username": "username01",
+        "mobile_number": "08888885",
+        "img": "https://i.ibb.co/vjs8ctj/1.jpg",
+        "social_link": {
+            "facebook": "facebook",
+            "twitter": "twitter",
+            "linkedin": "linkedin",
+            "instagram": "instagram"
+        },
+        "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+                "lat": "-43.9509",
+                "lng": "-34.4618"
+            }
+        }
+    },
+    {
+        "_id": "635a0c04a6d23122ae",
+        "emplyee_id": "02",
+        "title": "Engine Expert",
+        "specialty": "Car Engine Plug",
+        "name": "MD Rony Mia",
+        "email": "car@doctor.dev",
+        "username": "username01",
+        "mobile_number": "08888885",
+        "img": "https://i.ibb.co/Bf57x1V/2.jpg",
+        "social_link": {
+            "facebook": "facebook",
+            "twitter": "twitter",
+            "linkedin": "linkedin",
+            "instagram": "instagram"
+        },
+        "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+                "lat": "-43.9509",
+                "lng": "-34.4618"
+            }
+        }
+    },
+    {
+        "_id": "635a0c64a6d23122ae",
+        "emplyee_id": "03",
+        "title": "Engine Expert",
+        "specialty": "Car Engine Plug",
+        "name": "MD Rony Mia",
+        "email": "car@doctor.dev",
+        "username": "username01",
+        "mobile_number": "08888885",
+        "img": "https://i.ibb.co/rb35fZx/3.jpg",
+        "social_link": {
+            "facebook": "facebook",
+            "twitter": "twitter",
+            "linkedin": "linkedin",
+            "instagram": "instagram"
+        },
+        "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+                "lat": "-43.9509",
+                "lng": "-34.4618"
+            }
+        }
+    }
+]
