@@ -23,7 +23,7 @@ const Services = () => {
     return (
         <div className='w-full flex flex-col justify-center items-center gap-6'>
             <div className='text-center w-1/2 flex flex-col justify-center items-center'>
-                <p className="text-xl font-bold text-orange-600">Services</p>
+                <p className="text-xl font-bold text-primary">Services</p>
                 <h2 className="text-[45px] font-semibold text-darkBlack">Our Service Area</h2>
                 <p className="text-gray">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                 <div className="flex flex-row justify-center items-center gap-3">
