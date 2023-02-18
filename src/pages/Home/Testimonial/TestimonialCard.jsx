@@ -32,7 +32,7 @@ const TestimonialCard = () => {
                     <img src={quote} alt="" />
                 </div>
             </div>
-            <div className="card card-compact shadow-xl p-6 items-start gap-6 relative">
+            <div className="card card-compact shadow-xl p-20 items-start gap-6 relative">
                 <div className="flex flex-row gap-3 items-center justify-center rounded-[50%]">
                     <figure className="h-[60px] w-[60px]">
                         <img src={img} className="object-cover" alt="" />

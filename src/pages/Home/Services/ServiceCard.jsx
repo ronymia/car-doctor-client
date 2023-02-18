@@ -16,9 +16,10 @@ const ServiceCard = ({ service }) => {
                 <div className="flex justify-between items-center">
                     <p className='text-xl text-primary font-semibold'>Price: ${price}</p>
                     <Link to={`/checkout/${_id}`}
-                        className="bg-white/30"
+                        className="bg-white/30 rounded-[50%] hover:bg-primary h-[40px] w-[40px] group
+                        flex items-center justify-center transition-all duration-500 cursor-pointer"
                     >
-                        <button className="text-3xl text-primary"><AiOutlineArrowRight /></button>
+                        <AiOutlineArrowRight className="text-3xl text-primary group-hover:text-white group-hover:text-[25px] transition-all duration-500 cursor-pointer" />
                     </Link>
                 </div>
             </div>

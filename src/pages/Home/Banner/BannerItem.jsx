@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import './BannerItem.css';
 
 const BannerItem = ({ slide }) => {
@@ -24,9 +25,13 @@ const BannerItem = ({ slide }) => {
                     <button className="btn btn-outline hover:text-primary hover:border-primary hover:bg-transparent">Latest Project</button>
                 </div>
             </div>
-            <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-                <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a>
-                <a href={`#slide${next}`} className="btn btn-circle">❯</a>
+            <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 gap-2">
+                <a href={`#slide${prev}`} className=" h-[50px] w-[50px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+                    <AiOutlineArrowLeft size={25} />
+                </a>
+                <a href={`#slide${next}`} className="h-[50px] w-[50px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+                    <AiOutlineArrowRight size={25} />
+                </a>
             </div>
         </div>
     );

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineSearch, HiOutlineShoppingBag } from 'react-icons/hi';
+import { FaUser } from 'react-icons/fa';
+
 import logo from '../../../assets/logo.svg';
 
 
@@ -24,7 +26,7 @@ const Header = () => {
             <NavLink to='/blog'>Blog</NavLink>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <NavLink to='/orders'>Orders</NavLink>
+            <NavLink to='/orders'>Dashboard</NavLink>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
             <NavLink to='/login'>Login</NavLink>
@@ -32,7 +34,7 @@ const Header = () => {
     </>
 
     return (
-        <header className="navbar h-20 md:px-12 px-2">
+        <header className="navbar h-20 md:px-[7%] px-2 sticky top-0 bg-white z-50">
             <div className="navbar-start flex relative"
                 onClick={() => setToggleIsOpned(!toggleIsOpned)}
             >
@@ -56,6 +58,9 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <div className="flex flex-row items-center text-darkBlack2">
+                    <button className="btn btn-ghost text-2xl">
+                        <FaUser />
+                    </button>
                     <button className="btn btn-ghost text-2xl">
                         <HiOutlineShoppingBag />
                     </button>

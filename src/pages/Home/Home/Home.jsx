@@ -10,7 +10,7 @@ import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     return (
-        <div className="px-12">
+        <div className="px-[7%]">
             <Banner />
             <About />
             <Services />
