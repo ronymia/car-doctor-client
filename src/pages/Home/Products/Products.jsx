@@ -14,10 +14,10 @@ const Products = () => {
 
     return (
         <section className="w-full flex flex-col justify-center items-center gap-6">
-            <div className='text-center w-1/2 flex flex-col justify-center items-center'>
-                <p className="text-xl font-bold text-primary">Popular Products</p>
-                <h2 className="text-[45px] font-semibold text-darkBlack">Browse Our Products</h2>
-                <p className="text-gray">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-0">
+                <p className="md:text-xl text-lg font-bold text-primary">Popular Products</p>
+                <h2 className="md:text-[45px] text-3xl font-semibold text-darkBlack">Browse Our Products</h2>
+                <p className="text-gray text-sm md:text-base">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
