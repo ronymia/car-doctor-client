@@ -14,12 +14,12 @@ const OurTeam = () => {
 
     return (
         <section className="w-full flex flex-col justify-center items-center gap-6 my-[130px]">
-            <div className='text-center w-1/2 flex flex-col justify-center items-center'>
-                <p className="text-xl font-bold text-primary">Team</p>
-                <h2 className="text-[45px] font-semibold text-darkBlack">Meet Our Team</h2>
-                <p className="text-gray">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-0">
+                <p className="md:text-xl text-lg font-bold text-primary">Team</p>
+                <h2 className="md:text-[45px] text-3xl font-semibold text-darkBlack">Meet Our Team</h2>
+                <p className="text-gray md:text-base text-sm">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
-            <div className="flex flex-row items-center justify-center gap-4 relative">
+            <div className="flex md:flex-row flex-col items-center justify-center gap-4 relative">
                 {
                     teamMember.map(member => <OurTeamCard
                         key={member._id}
