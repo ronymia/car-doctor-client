@@ -11,7 +11,6 @@ const OurTeam = () => {
             .then(data => setTeamMember(data));
     }, []);
 
-    console.log(teamMember)
 
     return (
         <section className="w-full flex flex-col justify-center items-center gap-6 my-[130px]">

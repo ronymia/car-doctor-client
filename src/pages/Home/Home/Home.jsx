@@ -1,6 +1,7 @@
 import React from 'react';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
+import HeroCarousel from '../Banner/HeroCarousel';
 import ContactSummary from '../ContactSummary/ContactSummary';
 import CoreFeature from '../CoreFeature/CoreFeature';
 import OurTeam from '../OurTeam/OurTeam';
@@ -11,7 +12,8 @@ import Testimonial from '../Testimonial/Testimonial';
 const Home = () => {
     return (
         <div className="px-[7%]">
-            <Banner />
+            {/* <Banner /> */}
+            <HeroCarousel />
             <About />
             <Services />
             <ContactSummary />

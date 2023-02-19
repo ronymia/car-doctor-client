@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #FF3811;
+}
+
 @layer base {
     html::-webkit-scrollbar {
         width: 10px;
