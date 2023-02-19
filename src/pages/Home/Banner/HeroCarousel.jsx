@@ -68,31 +68,31 @@ const HeroCarousel = () => {
                         <SwiperSlide
                             key={slide.id}
                         >
-                            <div className='carousel-img h-[600px] overflow-hidden'>
+                            <div className='carousel-img md:h-[600px] overflow-hidden'>
                                 <img src={slide.image} className="object-cover w-full rounded-xl" alt="#" />
                             </div>
-                            <div className="w-1/2 absolute left-[100px] top-[100px] flex flex-col gap-12">
+                            <div className="w-1/2 absolute md:left-[100px] left-8 md:top-[100px] top-7 flex flex-col md:gap-12 gap-5">
                                 <div className="">
-                                    <h1 className='text-6xl font-bold text-white leading-tight'>
+                                    <h1 className='md:text-6xl font-bold text-white leading-tight'>
                                         Affordable <br />
                                         Price for Car <br />
                                         Servicing
                                     </h1>
                                 </div>
                                 <div className="">
-                                    <p className='text-lg text-white'>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+                                    <p className='md:text-lg text-xs text-white'>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                                 </div>
-                                <div className="">
-                                    <button className="btn bg-primary mr-5 text-white hover:text-primary hover:border-primary">Discover More</button>
-                                    <button className="btn btn-outline hover:text-primary hover:border-primary hover:bg-transparent">Latest Project</button>
+                                <div className="flex items-start justify-start">
+                                    <button className="btn bg-primary h-5 mr-5 text-white hover:text-primary hover:border-primary md:text-base text-[8px]">Discover More</button>
+                                    <button className="btn  btn-outline hover:text-primary hover:border-primary hover:bg-transparent md:text-base text-[10px]">Latest Project</button>
                                 </div>
                             </div>
                             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 gap-2">
-                                <div className=" h-[50px] w-[50px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
-                                    <AiOutlineArrowLeft size={25} />
+                                <div className=" md:h-[50px] h-[25px] md:w-[50px] w-[25px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
+                                    <AiOutlineArrowLeft />
                                 </div>
-                                <div className="h-[50px] w-[50px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
-                                    <AiOutlineArrowRight size={25} />
+                                <div className="md:h-[50px] h-[25px] md:w-[50px] w-[25px]  bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
+                                    <AiOutlineArrowRight />
                                 </div>
                             </div>
                         </SwiperSlide>
