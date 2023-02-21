@@ -14,7 +14,7 @@ const OurTeam = () => {
 
     return (
         <section className="w-full flex flex-col justify-center items-center gap-6 my-[130px]">
-            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-0">
+            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-3">
                 <p className="md:text-xl text-lg font-bold text-primary">Team</p>
                 <h2 className="md:text-[45px] text-3xl font-semibold text-darkBlack">Meet Our Team</h2>
                 <p className="text-gray md:text-base text-sm">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>

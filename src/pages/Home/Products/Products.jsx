@@ -14,7 +14,7 @@ const Products = () => {
 
     return (
         <section className="w-full flex flex-col justify-center items-center gap-6">
-            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-0">
+            <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center gap-1 md:gap-3">
                 <p className="md:text-xl text-lg font-bold text-primary">Popular Products</p>
                 <h2 className="md:text-[45px] text-3xl font-semibold text-darkBlack">Browse Our Products</h2>
                 <p className="text-gray text-sm md:text-base">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
