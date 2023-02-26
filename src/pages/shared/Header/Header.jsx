@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineSearch, HiOutlineShoppingBag } from 'react-icons/hi';
-import { FaUser } from 'react-icons/fa';
 
 import logo from '../../../assets/logo.svg';
 
@@ -17,19 +16,19 @@ const Header = () => {
             >Home</NavLink>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <NavLink to='/about'>About</NavLink>
+            <a href="#about">About</a>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <NavLink to='/services'>Services</NavLink>
+            <a href="#services">Services</a>
+        </li>
+        <li className='font-semibold text-darkBlack2 hover:text-primary'>
+            <a href="#products">Products</a>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
             <NavLink to='/blog'>Blog</NavLink>
         </li>
         <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <NavLink to='/orders'>Dashboard</NavLink>
-        </li>
-        <li className='font-semibold text-darkBlack2 hover:text-primary'>
-            <NavLink to='/login'>Login</NavLink>
+            <NavLink to='/dashboard'>Dashboard</NavLink>
         </li>
     </>
 
@@ -37,7 +36,7 @@ const Header = () => {
         <header className="navbar h-20 md:px-[7%] px-2 sticky top-0 bg-white z-50 mb-5">
             <div className="navbar-start pl-2">
                 <Link to="/" className="">
-                    <img className="md:w-3/4 w-1/2" src={logo} alt="logo" />
+                    <img className="md:w-3/4 w-2/3" src={logo} alt="logo" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -47,19 +46,16 @@ const Header = () => {
             </div>
             <div className="navbar-end flex  gap-1 ">
                 <div className="flex flex-row items-center text-darkBlack2">
-                    <button className="btn btn-ghost text-base md:text-2xl">
-                        <FaUser />
-                    </button>
-                    <button className="btn btn-ghost md:text-2xl text-base">
+                    <button className="btn btn-ghost md:text-2xl text-xl">
                         <HiOutlineShoppingBag />
                     </button>
-                    <button className="btn btn-ghost md:text-2xl text-base">
+                    <button className="btn btn-ghost md:text-2xl text-xl">
                         <HiOutlineSearch />
                     </button>
                 </div>
 
-                <div className="group h-[35px] md:h-[50px] w-[100px] md:w-[130px] inline-flex justify-center items-center border border-primary hover:border-primary hover:bg-primary transition-all duration-300 rounded-[5px] cursor-pointer ml-2 px-2">
-                    <Link className=" text-primary group-hover:text-white font-semibold md:text-base text-[10px]">Appointment</Link>
+                <div className="group h-[35px] md:h-[45px] w-[80px] md:w-[100px] inline-flex justify-center items-center border border-primary hover:border-primary hover:bg-primary transition-all duration-300 rounded-[5px] cursor-pointer ml-2 px-2">
+                    <Link className=" text-primary group-hover:text-white font-semibold md:text-lg text-[14px]">Login</Link>
                 </div>
 
 

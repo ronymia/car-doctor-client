@@ -26,6 +26,10 @@
         @apply bg-primary
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply font-Inter bg-white
     }

@@ -21,7 +21,9 @@ const Services = () => {
 
 
     return (
-        <div className="w-full flex flex-col justify-center items-center gap-6">
+        <div
+            id="services"
+            className="w-full flex flex-col justify-center items-center gap-6">
             <div className="text-center md:w-1/2 w-full flex flex-col justify-center items-center lg:gap-3">
                 <p className="md:text-xl text-lg font-bold text-primary">Services</p>
                 <h2 className="md:text-[45px] text-2xl font-semibold text-darkBlack my-1">Our Service Area</h2>

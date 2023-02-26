@@ -7,8 +7,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import './BannerItem.css';
+// custome css
+import './Carousel.css';
 
 import img1 from '../../../assets/images/banner/1.jpg';
 import img2 from '../../../assets/images/banner/2.jpg';
@@ -46,7 +46,7 @@ const bannerData = [
     }
 ]
 
-const HeroCarousel = () => {
+const Carousel = () => {
 
     return (
         <>
@@ -54,14 +54,14 @@ const HeroCarousel = () => {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Navigation, Autoplay, Pagination]}
-                className="w-full"
+                className="w-full rounded-[10px]"
             >
                 {
                     bannerData.map(slide =>
@@ -69,7 +69,7 @@ const HeroCarousel = () => {
                             key={slide.id}
                         >
                             <div className='carousel-img md:h-[600px] overflow-hidden'>
-                                <img src={slide.image} className="object-cover w-full rounded-xl" alt="#" />
+                                <img src={slide.image} className="bg-center object-fill w-full rounded-xl" alt="#" />
                             </div>
                             <div className="w-1/2 absolute md:left-[100px] left-8 md:top-[100px] top-7 flex flex-col md:gap-12 gap-5">
                                 <div className="">
@@ -82,25 +82,32 @@ const HeroCarousel = () => {
                                 <div className="">
                                     <p className='md:text-lg text-xs text-white'>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                                 </div>
-                                <div className="flex items-start justify-start">
-                                    <button className="btn bg-primary h-5 mr-5 text-white hover:text-primary hover:border-primary md:text-base text-[8px]">Discover More</button>
-                                    <button className="btn  btn-outline hover:text-primary hover:border-primary hover:bg-transparent md:text-base text-[10px]">Latest Project</button>
+
+                                <div className="inline-flex gap-4 items-start justify-start">
+                                    <button className="inline-flex justify-center items-center w-[80px] md:w-[170px] h-[28px] md:h-[56px] bg-primary text-white border border-primary md:text-lg text-[10px] font-semibold rounded-[5px]">Discover More</button>
+
+                                    <button className="inline-flex justify-center items-center w-[80px] md:w-[170px] h-[28px] md:h-[56px] text-white bg-transparent  border border-white md:text-lg text-[10px] font-semibold rounded-[5px]">Latest Project</button>
                                 </div>
                             </div>
+
+                            {/* navigation button  */}
                             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 gap-2">
-                                <div className=" md:h-[50px] h-[25px] md:w-[50px] w-[25px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
+                                <button type="button"
+                                    className=" md:h-[50px] h-[25px] md:w-[50px] w-[25px] bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
                                     <AiOutlineArrowLeft />
-                                </div>
-                                <div className="md:h-[50px] h-[25px] md:w-[50px] w-[25px]  bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
+                                </button>
+
+                                <button type="button"
+                                    className="md:h-[50px] h-[25px] md:w-[50px] w-[25px]  bg-lightGray/60 rounded-[50%] flex justify-center items-center text-darkBlack2 hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer md:text-[25px] text-[12px]">
                                     <AiOutlineArrowRight />
-                                </div>
+                                </button>
                             </div>
                         </SwiperSlide>
                     )
                 }
             </Swiper>
         </>
-    )
+    );
 };
 
-export default HeroCarousel;
+export default Carousel;
