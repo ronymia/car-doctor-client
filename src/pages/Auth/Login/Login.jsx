@@ -13,7 +13,7 @@ const Login = () => {
   return (
     <div className="flex flex-row items-center justify-center px-[150px] gap-10">
       {/* login img  LEFT SIDE */}
-      <div className="">
+      <div className="hidden md:block">
         <figure className="w-96 h-auto">
           <img
             src={loginImg}
@@ -24,7 +24,7 @@ const Login = () => {
       </div>
 
       {/* login form  RIGHT SIDE*/}
-      <div className="h-[500px] rounded-[10px] border border-[#D0D0D0] flex flex-col items-center p-[50px]">
+      <div className="h-auto rounded-[10px] border border-[#D0D0D0] flex flex-col items-center p-5 md:p-[50px]">
         <h1 className="mb-6 text-4xl font-semibold block text-center text-darkBlack2">
           Login
         </h1>
@@ -44,7 +44,7 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="your email"
-                className="block h-14 w-[460px] bg-white rounded-[10px] border border-[#E8E8E8] py-2 px-4 placeholder:capitalize placeholder:text-[15px] placeholder:text-[#A2A2A2] text-darkBlack font-medium text-lg"
+                className="block h-14 w-[360px] md:w-[460px] bg-white rounded-[10px] border border-[#E8E8E8] py-2 px-4 placeholder:capitalize placeholder:text-[15px] placeholder:text-[#A2A2A2] text-darkBlack font-medium text-lg"
                 {...register("email", {
                   pattern: /^\S+@\S+\.\S+$/,
                 })}
@@ -62,7 +62,7 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="your password"
-                className="block h-14 w-[460px] bg-white rounded-[10px] border border-[#E8E8E8] py-2 px-4 placeholder:capitalize placeholder:text-[15px] placeholder:text-[#A2A2A2] text-darkBlack font-medium text-lg"
+                className="block h-14 w-[360px] md:w-[460px] bg-white rounded-[10px] border border-[#E8E8E8] py-2 px-4 placeholder:capitalize placeholder:text-[15px] placeholder:text-[#A2A2A2] text-darkBlack font-medium text-lg"
                 {...register("password", {
                   pattern: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/,
                   minLength: 6,
