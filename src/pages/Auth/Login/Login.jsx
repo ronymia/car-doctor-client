@@ -87,7 +87,10 @@ const Login = () => {
         </div>
         <h3 className="text-[#737373] text-lg">
           Have an account?{" "}
-          <Link className="text-primary font-medium hover:underline">
+          <Link
+            to={"/auth/register"}
+            className="text-primary font-medium hover:underline"
+          >
             Sign In
           </Link>
         </h3>

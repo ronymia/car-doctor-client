@@ -57,7 +57,7 @@ const Header = () => {
 
         <div className="group h-[35px] md:h-[45px] w-[80px] md:w-[100px] inline-flex justify-center items-center border border-primary hover:border-primary hover:bg-primary transition-all duration-300 rounded-[5px] cursor-pointer ml-2 px-2">
           <Link
-            to={"/login"}
+            to={"/auth/login"}
             className=" text-primary group-hover:text-white font-semibold md:text-lg text-[14px]"
           >
             Login
