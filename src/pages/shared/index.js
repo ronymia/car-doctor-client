@@ -1,9 +1,8 @@
 import Header from "./Header/Header";
 import Footer from './Footer/Footer';
-import NotFound from "./NotFound/NotFound";
-
+import ErrorPage from "./ErrorPage/ErrorPage";
 export {
     Header,
     Footer,
-    NotFound
+    ErrorPage
 }

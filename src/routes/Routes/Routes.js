@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "../../layouts";
-import { Home, Login } from "../../pages";
-import Register from "../../pages/Auth/Register/Register";
-import { NotFound } from "../../pages/shared";
+import { Home } from "../../pages";
+import { Login, Register } from "../../pages/Auth";
+import { ErrorPage } from "../../pages/shared";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +25,6 @@ export const router = createBrowserRouter([
     },
     {
         path:'*',
-        element:<NotFound/>
+        element:<ErrorPage/>
     }
 ]);
