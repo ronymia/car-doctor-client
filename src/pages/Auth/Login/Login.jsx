@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import loginImg from "../../../assets/images/login/login.svg";
@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { signInUser } = useAuth();
   const [loginError, setLoginError] = useState('');
   const {
@@ -17,6 +18,9 @@ const Login = () => {
     watch,
     reset,
     formState: { errors } } = useForm();
+
+  //user navigate
+  const from = location.state?.from?.pathname || "/";
 
 
   const onSubmit = (data) => {
@@ -30,7 +34,7 @@ const Login = () => {
         if (user) {
           reset();
           toast.success('Successfully Login');
-          navigate("/");
+          navigate(from, { replace: true });
         }
       }).catch(error => {
         const errorCode = error.code;

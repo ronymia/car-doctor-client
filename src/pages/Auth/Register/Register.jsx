@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
@@ -9,6 +9,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { createUser } = useAuth();
   const [loginError, setLoginError] = useState('');
 
@@ -16,6 +17,9 @@ const Register = () => {
     handleSubmit,
     reset,
     formState: { errors } } = useForm();
+
+  //user navigate 
+  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
     const { name, email, password, confirmPassword } = data;
@@ -32,7 +36,7 @@ const Register = () => {
         if (user) {
           reset();
           toast.success('Successfully create Account');
-          navigate("/");
+          navigate(from, { replace: true });
         }
       }).catch(error => {
         const errorCode = error.code;
