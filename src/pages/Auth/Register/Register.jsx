@@ -19,14 +19,18 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { name, email, password, confirmPassword } = data;
-    console.log(data)
+    console.log(data);
+
+    if (password !== confirmPassword) {
+      return setLoginError("password don't match");
+    }
 
     //createing new user
     createUser(email, password)
       .then(result => {
         const user = result.user;
         if (user) {
-          // reset();
+          reset();
           toast.success('Successfully create Account');
           navigate("/");
         }
@@ -92,10 +96,8 @@ const Register = () => {
               })}
             />
             {/* error message   */}
-            <label className="label">
-              {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
-              {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
-            </label>
+            {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+            {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
           </div>
           {/* email input  */}
           <div className="flex flex-col gap-2">
@@ -120,11 +122,9 @@ const Register = () => {
                 }
               })}
             />
-            <label className="label">
-              {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
-              {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
-              {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
-            </label>
+            {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+            {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+            {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
           </div>
 
           {/* password  input */}
@@ -154,11 +154,9 @@ const Register = () => {
                 },
               })}
             />
-            <label className="label">
-              {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
-              {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
-              {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
-            </label>
+            {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+            {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+            {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
           </div>
           {/* confirm password  input */}
           <div className="flex flex-col gap-2">
@@ -180,10 +178,8 @@ const Register = () => {
               })}
             />
             {/* error message   */}
-            <label className="label">
-              {errors.ConfirmPassword?.type === 'required' && <span className="label-text-alt text-red-500">{errors.ConfirmPassword.message}</span>}
-              {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
-            </label>
+            {errors.ConfirmPassword?.type === 'required' && <span className="label-text-alt text-red-500">{errors.ConfirmPassword.message}</span>}
+            {loginError && <span className="label-text-alt text-red-500">{loginError}</span>}
           </div>
 
           {/* login button  */}
