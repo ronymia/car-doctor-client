@@ -8,7 +8,7 @@ import errorRoute from "../../../assets/images/notFound.png";
 
 const ErrorPage = () => {
   const error = useRouteError();
-  console.error(error);
+  console.log(error);
 
   return (
     <div className="h-screen max-w-screen-xl">
